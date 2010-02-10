@@ -20,6 +20,7 @@
 
         protected function process()
         {
+            $response = array();
 
             // get version key
             //
@@ -38,7 +39,7 @@
             {
                 // otherwise use version
                 //
-                $page = $version;
+                // $page = $version;
             }
 
 
@@ -62,26 +63,36 @@
                     $response['message'] = "Lime version updated";
                 }
 
-
-                // submit for approval
+                // log versioning
                 //
-                $submission = $owner->level == 'default';
+                LimeVersion::logUpdate( $lime, $owner->id, $page_id );
 
 
-                // update for owner=1
+                // raise specific level updates
                 //
-                if( isType( 'root|super|administrator|moderator|editor', $owner->level ) )
+                switch( $owner->level )
                 {
-                    // downmix?
-                    LimeVersion::update( $lime, 1, $page );
-                    $response['message'].= "; Live version updated";
+                    case 'root':
+                    case 'super':
+                    case 'administrator':
+                        NuEvent::action( 'lime_page_updated_admin', $page );
+                        break;
+
+                    case 'moderator':
+                        NuEvent::action( 'lime_page_updated_moderator', $page );
+                        break;
+                    
+                    case 'editor':
+                        NuEvent::action( 'lime_page_updated_editor', $page );
+                        break;
                 }
             }
             else
             {
                 $response['message'] = 'No changes updated';
             }
-            
+
+            $response['status'] = "ok";
             return $response;
         }
     }

@@ -43,15 +43,15 @@
 
 
         //
-        // log pending version
+        // log updated
         //
-        private static function logPending( $type, $id, $user )
+        public static function logUpdate( $lime, $owner, $page )
         {
-            if( $type>0 && $id>0 && $user>0 )
+            if( $lime->id > 0 && $owner > 0 && $page > 0 )
             {
                 WrapMySQL::void(
-                    "insert ignore into context_variations_pending (type,id,user) ".
-                    "values ({$type}, {$id}, {$user});");
+                    "insert into lime_version_log (lime_type, lime_id, owner, page) ".
+                    "values ({$lime->type_id}, {$lime->id}, {$owner}, {$page});");
             }
         }
 
@@ -119,13 +119,15 @@
         //
         // load page based on version
         //
-        public static function page( $lime, $owner, &$id )
+        public static function page( $lime, $owner, &$id=false )
         {
             $page       = null;
             $version    = self::load( $lime, $owner );
 
             if( !is_null( $version ) )
             {
+                $id = $version['id'];
+
                 if( $version['text'] )
                     $page = NuEvent::filter('lime_page_instance', $page, $version['text']);
             }
