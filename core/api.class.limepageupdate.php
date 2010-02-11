@@ -5,6 +5,7 @@
     */
 
     require_once( 'api.class.limemethod.php' );
+    require_once( 'lib.limeprocess.php' );
 
     class LimePageUpdate extends LimeMethod
     {
@@ -20,80 +21,26 @@
 
         protected function process()
         {
-            $response = array();
 
             // get version key
             //
-            $owner  = $this->getAuth();
-            $lime   = $this->getLime();
+            $owner      = $this->getAuth();
+            $lime       = $this->getLime();
 
-            $page_id    = false;
-
-            if( is_null( $version ) )
-            {
-                // get version
-                //
-                $page = LimeVersion::page( $lime, $owner->id, $page_id );
-            }
-            else
-            {
-                // otherwise use version
-                //
-                // $page = $version;
-            }
-
-
-            // raise event that page is being updated
-            // pass the page object and the request data
+            // init version
             //
-            $page = NuEvent::filter( 'lime_page_update', $page, $this->call );
+            $version    = new LimeVersion( $lime, $owner );
 
-
-            // if page null, no change
+            // process update
             //
-            if( !is_null($page) )
-            {
-
-                // store page for lime+owner
-                //
-                $page_id = LimeVersion::store( $lime, $owner->id, $page, $page_id );
-
-                if( $page_id )
-                {
-                    $response['message'] = "Lime version updated";
-                }
-
-                // log versioning
-                //
-                LimeVersion::logUpdate( $lime, $owner->id, $page_id );
-
-
-                // raise specific level updates
-                //
-                switch( $owner->level )
-                {
-                    case 'root':
-                    case 'super':
-                    case 'administrator':
-                        NuEvent::action( 'lime_page_updated_admin', $page );
-                        break;
-
-                    case 'moderator':
-                        NuEvent::action( 'lime_page_updated_moderator', $page );
-                        break;
-                    
-                    case 'editor':
-                        NuEvent::action( 'lime_page_updated_editor', $page );
-                        break;
-                }
-            }
-            else
-            {
-                $response['message'] = 'No changes updated';
-            }
-
-            $response['status'] = "ok";
+            $response   = LimeProcess::update(
+                            $version, 
+                            $this->call, 
+                            $this->call->lime_live );
+            // return
+            //
             return $response;
+
         }
     }
 
