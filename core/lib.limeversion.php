@@ -27,6 +27,70 @@
 
     class LimeVersion
     {
+        protected $lime_object;
+        protected $owner_object;
+        protected $page_id;
+        protected $page_object;
+
+        //
+        // constructor
+        //
+        function __construct( $lime, $owner )
+        {
+            $this->lime_object  = $lime;
+            $this->owner_object = $owner;
+
+            // get page
+            //
+            $page_id            = false;
+            $this->page_object  = self::loadPage( $lime, $owner, $page_id );
+            $this->page_id      = $page_id;
+        }
+
+        //
+        // __get
+        //
+        function __get( $f )
+        {
+            switch( $f )
+            {
+                case 'page_id':
+                    return $this->page_id;
+            }
+
+            return null;
+        }
+
+        //
+        // __set
+        //
+        function __set( $f, $v )
+        {
+            switch( $f )
+            {
+                case 'page_id':
+                    $this->page_id = $v;
+            }
+        }
+
+        //
+        // object accessors
+        //
+        function &lime()
+        {
+            return $this->lime_object;
+        }
+
+        function &owner()
+        {
+            return $this->owner_object;
+        }
+
+        function &page()
+        {
+            return $this->page_object;
+        }
+
 
         //
         // log revision of primary
@@ -119,7 +183,7 @@
         //
         // load page based on version
         //
-        public static function page( $lime, $owner, &$id=false )
+        public static function loadPage( $lime, $owner, &$id=false )
         {
             $page       = null;
             $version    = self::load( $lime, $owner );
@@ -134,6 +198,7 @@
 
             return $page;
         }
+
     }
 
 ?>
