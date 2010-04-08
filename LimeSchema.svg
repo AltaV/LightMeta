@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="47cm" height="20cm" viewBox="17 11 928 392" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="353.348" y="12.4662" width="179.4" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="353.348" y="12.4662" width="179.4" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="443.048" y="31.4662">Entity</text>
+    <rect style="fill: #ffffff" x="353.348" y="40.4662" width="179.4" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="353.348" y="40.4662" width="179.4" height="84"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="356.348" y="54.4662">+id: Integer</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="356.348" y="70.4662">+type: Static Type</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="356.348" y="86.4662">+created_at: Timestamp</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="356.348" y="102.466">+guid: UUID</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="356.348" y="118.466">+PRIMARY KEY = (id)</text>
+    <rect style="fill: #ffffff" x="353.348" y="124.466" width="179.4" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="353.348" y="124.466" width="179.4" height="8"/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="73.982,121.75 73.982,66.4662 353.348,66.4662 "/>
+    <polygon style="fill: #ffffff" points="73.982,146.921 69.182,132.921 73.982,118.921 78.782,132.921 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="73.982,146.921 69.182,132.921 73.982,118.921 78.782,132.921 "/>
+    <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="213.665" y="62.4662"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="84.982" y="142.921"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="349.348" y="62.4662"></text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="682.725" y="25.6674" width="241" height="70"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="682.725" y="25.6674" width="241" height="70"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="803.225" y="44.6674">Resolution</text>
+    <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="803.225" y="60.1674">Resolution enforces the constraint of</text>
+    <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="803.225" y="74.1674">unique labeling of entities.</text>
+    <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="803.225" y="88.1674">Resoltuion may contain parent data.</text>
+    <rect style="fill: #ffffff" x="682.725" y="95.6674" width="241" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="682.725" y="95.6674" width="241" height="68"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="685.725" y="109.667">+entity: Entity</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="685.725" y="125.667">+label: Label</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="685.725" y="141.667">+parent: Entity</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="685.725" y="157.667">+PRIMARY KEY = (label, parent)</text>
+    <rect style="fill: #ffffff" x="682.725" y="163.667" width="241" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="682.725" y="163.667" width="241" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="365.952" y="151.194" width="156.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="365.952" y="151.194" width="156.3" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="444.102" y="170.194">Label</text>
+    <rect style="fill: #ffffff" x="365.952" y="179.194" width="156.3" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="365.952" y="179.194" width="156.3" height="52"/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="368.952" y="193.194">+id: Integer</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="368.952" y="209.194">+type: Dynamic Type</text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="368.952" y="225.194">+resolution: String</text>
+    <rect style="fill: #ffffff" x="365.952" y="231.194" width="156.3" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="365.952" y="231.194" width="156.3" height="8"/>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="22.782" y="146.921" width="102.4" height="28"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="22.782" y="146.921" width="102.4" height="28"/>
+      <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="73.982" y="165.921">Type</text>
+      <rect style="fill: #ffffff" x="22.782" y="174.921" width="102.4" height="68"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="22.782" y="174.921" width="102.4" height="68"/>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="25.782" y="188.921">+id</text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="25.782" y="204.921">+name</text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="25.782" y="220.921">+display</text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="25.782" y="236.921">+description</text>
+      <rect style="fill: #ffffff" x="22.782" y="242.921" width="102.4" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="22.782" y="242.921" width="102.4" height="8"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="18.782" y="299.921" width="109.9" height="86"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="18.782" y="299.921" width="109.9" height="86"/>
+      <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="73.732" y="315.921">&lt;&lt;Type&gt;&gt;</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="73.732" y="334.921">Static Type</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="73.732" y="350.421">Hardwired into</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="73.732" y="364.421">database. 1-byte</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="73.732" y="378.421">Integer</text>
+      <rect style="fill: #ffffff" x="18.782" y="385.921" width="109.9" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="18.782" y="385.921" width="109.9" height="8"/>
+      <rect style="fill: #ffffff" x="18.782" y="393.921" width="109.9" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="18.782" y="393.921" width="109.9" height="8"/>
+    </g>
+    <g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="73.982,269.157 73.982,275.421 73.732,275.421 73.732,299.921 "/>
+      <polygon style="fill: #ffffff" points="81.982,269.157 73.982,253.157 65.982,269.157 "/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="81.982,269.157 73.982,253.157 65.982,269.157 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="160.982" y="148.221" width="134.9" height="86"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160.982" y="148.221" width="134.9" height="86"/>
+      <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="228.432" y="164.221">&lt;&lt;Type&gt;&gt;</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="228.432" y="183.221">Dynamic Type</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="228.432" y="198.721">Generated as</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="228.432" y="212.721">referenced.</text>
+      <text style="fill: #000000;text-anchor:middle;font-size:11.2;font-family:sanserif;font-style:italic;font-weight:normal" x="228.432" y="226.721">2-byte Integer</text>
+      <rect style="fill: #ffffff" x="160.982" y="234.221" width="134.9" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160.982" y="234.221" width="134.9" height="8"/>
+      <rect style="fill: #ffffff" x="160.982" y="242.221" width="134.9" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="160.982" y="242.221" width="134.9" height="8"/>
+    </g>
+    <g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="144.424,198.921 143.081,198.921 143.081,199.221 159.974,199.221 "/>
+      <polygon style="fill: #ffffff" points="144.424,190.921 128.424,198.921 144.424,206.921 "/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="144.424,190.921 128.424,198.921 144.424,206.921 "/>
+    </g>
+    <g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="228.432,250.221 228.432,342.921 128.682,342.921 "/>
+      <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="178.557" y="338.921"></text>
+      <polygon style="fill: #000000" points="180.557,338.921 180.557,330.921 188.557,334.921 "/>
+      <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="232.432" y="262.221"></text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="132.682" y="338.921"></text>
+    </g>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.424,189.194 943.725,189.194 943.725,121.667 923.725,121.667 "/>
+    <polygon style="fill: #ffffff" points="522.252,189.194 536.252,184.394 550.252,189.194 536.252,193.994 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="522.252,189.194 536.252,184.394 550.252,189.194 536.252,193.994 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="945.725" y="151.431"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="554.252" y="185.194"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="927.725" y="117.667"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="557.92,50.4662 655.284,50.4662 655.284,105.667 682.725,105.667 "/>
+    <polygon style="fill: #ffffff" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="657.284" y="74.0668"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="564.748" y="46.4662"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="678.725" y="101.667"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.424,189.194 623.53,189.194 623.53,299.692 724.809,299.692 "/>
+    <polygon style="fill: #ffffff" points="522.252,189.194 536.252,184.394 550.252,189.194 536.252,193.994 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="522.252,189.194 536.252,184.394 550.252,189.194 536.252,193.994 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="625.53" y="240.443"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="554.252" y="185.194"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="720.809" y="295.692"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="557.92,50.4662 599.518,50.4662 599.518,283.692 724.809,283.692 "/>
+    <polygon style="fill: #ffffff" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="601.518" y="163.079"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="564.748" y="46.4662"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="720.809" y="279.692"></text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="557.92,50.4662 629.856,50.4662 629.856,137.667 682.725,137.667 "/>
+    <polygon style="fill: #ffffff" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="532.748,50.4662 546.748,45.6662 560.748,50.4662 546.748,55.2662 "/>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="631.856" y="94.0668"></text>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="564.748" y="46.4662"></text>
+    <text style="fill: #000000;text-anchor:end;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="678.725" y="133.667"></text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #7f7f7f" x="676.531" y="202.81" width="252.042" height="147.025"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="676.531" y="202.81" width="252.042" height="147.025"/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="724.809" y="229.692" width="148.6" height="28"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="724.809" y="229.692" width="148.6" height="28"/>
+      <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:normal;font-weight:700" x="799.109" y="248.692">Attribute</text>
+      <rect style="fill: #ffffff" x="724.809" y="257.692" width="148.6" height="52"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="724.809" y="257.692" width="148.6" height="52"/>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="727.809" y="271.692">+id: Integer</text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="727.809" y="287.692">+entity: Entity</text>
+      <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="727.809" y="303.692">+resolution: Label</text>
+      <rect style="fill: #ffffff" x="724.809" y="309.692" width="148.6" height="8"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="724.809" y="309.692" width="148.6" height="8"/>
+    </g>
+  </g>
+</svg>
