@@ -113,13 +113,11 @@
     *
     * Lime Entity
     * extends Nuclear Entity
-    * contains type|id|name
     *
     */
 
     class LimeEntity extends Entity
     {
-        protected static $_instance;
         protected $type_id;
         protected $image_id;
 
@@ -146,11 +144,7 @@
             
             return null;
         }
-
-        public static function getInstance()
-        {
-            return self::$_instance;
-        }
+        
     }
 
 
