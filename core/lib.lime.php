@@ -121,6 +121,7 @@
     {
         protected static $_instance;
         protected $type_id;
+        protected $image_id;
 
         function __construct( $type, $type_id, $id, $name )
         {
@@ -134,8 +135,14 @@
             if( $r = parent::__get($f) )
                 return $r;
 
-            if( $f == "type_id" )
-                return $this->type_id;
+            switch( $f )
+            {
+                case 'type_id':
+                    return $this->type_id;
+
+                case 'image_id':
+                    return $this->image_id;
+            }
             
             return null;
         }
@@ -167,6 +174,8 @@
                 $object->name );
 
             self::$_instance = $this;
+            
+            $this->image_id  = $object->image;
         }
 
         public static function getInstance()
