@@ -310,7 +310,7 @@
             {
                 // rescurse for parent
                 $parent     = LimeEntity::resolve( $entity->parent, $create );
-                print_r($parent);
+                
                 if( is_null($parent) )
                 {
                     if( $create === true )
