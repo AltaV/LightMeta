@@ -228,7 +228,7 @@
                 else if( $create )
                 {
                     require_once('class.nuinsert.php');
-                    $insert = new NuInsert("lime_dynamic_types T");
+                    $insert = new NuInsert("lime_dynamic_types");
                     $insert->field( "type" );
                     $insert->value( array("'". safe_slash( $this->type ) ."'") );
                     $id = $insert->id();
@@ -310,7 +310,7 @@
             {
                 // rescurse for parent
                 $parent     = LimeEntity::resolve( $entity->parent, $create );
-                
+                print_r($parent);
                 if( is_null($parent) )
                 {
                     if( $create === true )
@@ -337,7 +337,7 @@
             if( $select->select() && ($data = $select->object()) )
             {
                 // create lime object
-                $lime   = new LimeEntity( $type, $type_id, -1, $name, $parent );
+                $lime   = new LimeEntity( $type, $type_id, null, $name, $parent );
                 
                 // acquired entity, assign data
                 foreach( $data as $k=>$v )
@@ -353,7 +353,7 @@
             // does not exist
             if( $create === true )
             {
-                LimeEntity::create( $entity );
+                return LimeEntity::create( $entity );
             }
         }
         
@@ -395,7 +395,7 @@
             
             $insert = new NuInsert("lime_entity");
             $insert->field("type,label,guid");
-            $insert->values( array($type_id, "'". safe_slash($name) ."'", 'UUID()') );
+            $insert->value( array($type_id, "'". safe_slash($name) ."'", 'UUID()') );
             
             // entity id
             $entity_id     = $insert->id();
@@ -407,7 +407,7 @@
             // insert
             $insert = new NuInsert("lime_resolution");
             $insert->field("label,parent,entity");
-            $insert->values( array( $label_id, $parent_id, $entity_id ) );
+            $insert->value( array( $label_id, $parent_id, $entity_id ) );
             
             // check affected, return resolve
             if( $insert->affected()>0 )
